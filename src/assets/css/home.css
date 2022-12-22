@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background-video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+}
+.Top-background{
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    z-index: 90;
+    display: flex;
+    background-color: #2a5555;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+.left-top-contents{
+    position: absolute;
+    width: 55%;
+    border-top: 100vh solid black;
+    border-right: 120px solid transparent;
+    z-index: 93;
+    opacity: 0.86;
+}
+.contents{
+    position: absolute;
+    margin: 0;
+    width: 55%;
+    z-index: 95;
+}
+.contents .text {
+    width: 100%;
+}
+.contents .text h1{
+    color: white;
+    text-align: center;
+}
+.contents .Berana-logo{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+.contents img{
+    width: 110px;
+    height: 150px;
+}
+.contents p{
+    text-align: center;
+    color: white;
+
+}
+.Berana-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+.contents h4{
+    color: white;
+    text-align: center;
+    width: 60%;
+}
