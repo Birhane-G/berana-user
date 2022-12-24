@@ -1,73 +1,124 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.background-video{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 0;
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
 }
-.Top-background{
-    position: absolute;
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
-    z-index: 90;
-    display: flex;
-    background-color: #2a5555;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.6;
+.Top-background {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: 90;
+  display: flex;
+  background-color: #2a5555;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
 }
-.left-top-contents{
-    position: absolute;
-    width: 55%;
-    border-top: 100vh solid black;
-    border-right: 120px solid transparent;
-    z-index: 93;
-    opacity: 0.86;
+.left-top-contents {
+  position: absolute;
+  width: 60%;
+  border-top: 100vh solid black;
+  border-right: 120px solid transparent;
+  z-index: 93;
+  opacity: 0.86;
 }
-.contents{
-    position: absolute;
-    margin: 0;
-    width: 55%;
-    z-index: 95;
+.contents {
+  position: absolute;
+  margin: 0;
+  width: 60%;
+  z-index: 95;
 }
 .contents .text {
-    width: 100%;
+  width: 100%;
 }
-.contents .text h1{
-    color: white;
-    text-align: center;
+.contents .text h1 {
+  color: white;
+  text-align: center;
 }
-.contents .Berana-logo{
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
+.contents .Berana-logo {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
 }
-.contents img{
-    width: 110px;
-    height: 150px;
+.contents img {
+  width: 110px;
+  height: 150px;
 }
-.contents p{
-    text-align: center;
-    color: white;
-
+.contents p {
+  text-align: center;
+  color: white;
 }
-.Berana-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
+.Berana-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
-.contents h4{
-    color: white;
-    text-align: center;
-    width: 60%;
+.contents h4 {
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  text-align: left;
+  font-weight: 300;
+  width: 60%;
+}
+.user-input-container {
+  display: flex;
+  padding: 10px 0px;
+}
+.user-input {
+  margin: 0 auto;
+}
+.user-input input {
+  width: 100%;
+  padding: 6px 6px;
+  margin-bottom: 10px;
+}
+.user-input select {
+  width: 105%;
+  padding: 6px 6px;
+  margin-bottom: 10px;
+}
+#userToSpacify {
+  display: none;
+  margin-bottom: 15px;
+}
+.user-input #userToSpacify textarea {
+  width: 105%;
+  resize: none;
+}
+span {
+  color: white;
+}
+.btn {
+  width: 106%;
+  background-color: #2a5555;
+  padding: 6px 6px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.bottom-content {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  background-color: #2a5555;
+}
+.Investment-text p {
+  margin-top: 10px;
 }
