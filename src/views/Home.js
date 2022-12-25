@@ -29,7 +29,8 @@ export const Home = () => {
 
   const [value, setValue] = useState("");
   const [Email, setEmail] = useState("");
-  const [msg, setmsg] = useState("");
+  // const [msg, setmsg] = useState("");
+
   const handleSelect = (e) => {
     setValue(e.target.value);
     const tar = document.getElementById("userToSpacify");
@@ -40,11 +41,13 @@ export const Home = () => {
     }
   };
 
-  const sendData = (e) => {
+  const sendData = async (e) => {
     e.preventDefault();
-    axios.post(`http://http://127.0.0.1:8000/api/userReg`, { Email }).then((res) => {
-      console.log(res);
-    });
+    try {
+      const response = await axios.post('http://127.0.0.1:8000/api/userReg', {email : Email});
+    } catch (error) {
+      // console.log(error);
+    }
   };
 
   return (
@@ -76,38 +79,42 @@ export const Home = () => {
             </div>
             <div className="user-input-container">
               <div className="user-input">
-                <span>*Email Address</span>
-                <input
-                  type="email"
-                  placeholder="Enter email address..."
-                  aria-label="Enter email address..."
-                  onChange={(e) => setEmail(e.target.value)}
-                  autofocus
-                />
-                <br />
-                <div className="select-container">
-                  <span>*From where Did You heared about us?</span>
-                  <select onChange={handleSelect}>
-                    {options.map((option) => (
-                      <option value={option.value}>{option.label}</option>
-                    ))}
-                  </select>
-                </div>
-                <div id="userToSpacify">
-                  <span>*please tell us</span>
-                  <textarea rows="3" />
-                </div>
+                <form onSubmit={sendData}>
+                  <span>*Email Address</span>
+                  <input
+                    type="email"
+                    placeholder="Enter email address..."
+                    aria-label="Enter email address..."
+                    onChange={(e) => setEmail(e.target.value)}
+                    autofocus
+                  />
+                  <br />
+                  <div className="select-container">
+                    <span>*From where Did You heared about us?</span>
+                    <select onChange={handleSelect}>
+                      {options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div id="userToSpacify">
+                    <span>*please tell us</span>
+                    <textarea rows="3" />
+                  </div>
 
-                <button className="btn" type="submit" onClick={sendData}>
-                  Subscribe
-                </button>
-                <a
-                  href="https://view.genial.ly/61e401e91c84d80cf4d99f2f/presentation-berana-pitch-deck"
-                  target="_blank"
-                  class="Investment-text"
-                >
-                  <p>INVESTMENT DECK</p>
-                </a>
+                  <button className="btn" type="submit">
+                    Subscribe
+                  </button>
+
+                  <div className="Investment-text">
+                    <a
+                      href="https://view.genial.ly/61e401e91c84d80cf4d99f2f/presentation-berana-pitch-deck"
+                      target="_blank"
+                    >
+                      INVESTMENT DECK
+                    </a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

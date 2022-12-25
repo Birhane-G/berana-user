@@ -94,7 +94,7 @@
   display: none;
   margin-bottom: 15px;
 }
-.user-input #userToSpacify textarea {
+#userToSpacify textarea {
   width: 105%;
   resize: none;
 }
@@ -115,10 +115,17 @@ span {
 .bottom-content {
   text-align: center;
 }
-a {
+.Investment-text {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+.Investment-text a {
   text-decoration: none;
-  background-color: #2a5555;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: black;
+  font-weight: 500;
 }
-.Investment-text p {
-  margin-top: 10px;
-}
+
