@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
 }
+.master-container {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
 .background-video {
   position: fixed;
   top: 50%;
@@ -14,10 +22,12 @@
   z-index: 0;
 }
 .Top-background {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
-  height: 100vh;
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   z-index: 90;
   display: flex;
   background-color: #2a5555;
@@ -26,8 +36,11 @@
   opacity: 0.6;
 }
 .left-top-contents {
-  position: absolute;
-  width: 60%;
+  position: fixed;
+  min-width: 60%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   border-top: 100vh solid black;
   border-right: 120px solid transparent;
   z-index: 93;
@@ -51,7 +64,7 @@
   justify-content: center;
   padding: 15px 0;
 }
-.contents img {
+.Berana-logo img {
   width: 110px;
   height: 150px;
 }
@@ -65,7 +78,7 @@
   align-items: center;
   padding-top: 10px;
 }
-.contents h4 {
+.Berana-text h4 {
   color: white;
   text-align: center;
   font-size: 22px;
@@ -127,5 +140,77 @@ span {
   border-radius: 8px;
   color: black;
   font-weight: 500;
+  transition: 0.4s;
 }
-
+.Investment-text a:hover{
+  background: none;
+  border: 2px solid white;
+  color: white;
+  transition: 0.4s;
+}
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  z-index: 100;
+}
+.social-icons .icons div {
+  background-color: black;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.social-mdi-bt {
+  margin-top: 10px;
+}
+.social-icons .icons div:hover {
+  background: none;
+  border: 2px solid white;
+}
+@media only screen and (max-width: 1066px) {
+  .Berana-logo img {
+    width: 80px;
+    height: 120px;
+  }
+  .Berana-text h4 {
+    text-align: center;
+    font-size: 20px;
+    width: 70%;
+  }
+  .social-icons {
+    position: absolute;
+    top: 25%;
+    left: 94%;
+    z-index: 100;
+  }
+}
+@media only screen and (max-width: 546px) {
+  .left-top-contents {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    border-top: 100vh solid black;
+    border-right: 120px solid transparent;
+  }
+  .social-icons {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  }
+  .icons{
+    display: block;
+  }
+  .contents {
+    width: 100%;
+  }
+  .Berana-logo img {
+    width: 80px;
+    height: 120px;
+  }
+  .Berana-text h4 {
+    text-align: center;
+    font-size: 20px;
+    width: 70%;
+  }
+}
