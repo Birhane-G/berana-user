@@ -124,26 +124,22 @@ export const Home = () => {
       </div>
       <div className="social-icons">
         <div className="icons">
-          <div>
-            <a href="https://www.facebook.com/profile.php?id=100070065453500">
-              <FaFacebookF
-                style={{
-                  color: "white",
-                  fontSize: "30px",
-                }}
-              />
-            </a>
-          </div>
-          <div className="social-mdi-bt">
-            <a href="https://www.instagram.com/berana_audiobooks/">
-              <FaInstagram
-                style={{
-                  color: "white",
-                  fontSize: "30px",
-                }}
-              />
-            </a>
-          </div>
+          <a href="https://www.facebook.com/profile.php?id=100070065453500">
+            <FaFacebookF
+              style={{
+                color: "white",
+                fontSize: "30px",
+              }}
+            />
+          </a>
+          <a href="https://www.instagram.com/berana_audiobooks/">
+            <FaInstagram
+              style={{
+                color: "white",
+                fontSize: "30px",
+              }}
+            />
+          </a>
         </div>
       </div>
     </div>

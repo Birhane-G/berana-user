@@ -3,9 +3,7 @@
   padding: 0;
 }
 .master-container {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -151,21 +149,20 @@ span {
 .social-icons {
   position: absolute;
   top: 50%;
-  left: 96%;
+  right: 0%;
   z-index: 100;
 }
-.social-icons .icons div {
+.icons a{
+  display: flex;
+  align-items: center;
   background-color: black;
-  padding: 8px 10px;
   border-radius: 50%;
-  cursor: pointer;
+  padding: 12px;
+  margin: 0 10px 10px;
 }
-.social-mdi-bt {
-  margin-top: 10px;
-}
-.social-icons .icons div:hover {
-  background: none;
-  border: 2px solid white;
+.icons a:hover{
+  padding: 12px;
+  border: 1px solid white;
 }
 @media only screen and (max-width: 1066px) {
   .Berana-logo img {
